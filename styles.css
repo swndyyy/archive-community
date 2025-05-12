@@ -1,0 +1,116 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, 
+    #e0f7fa 0%,
+    #fef9c3 20%,
+    #c8e6c9 40%,
+    #bbdefb 60%,
+    #a5d6a7 80%,
+    #e0f7fa 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Bubble efek */
+.bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bubbles span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  animation: floatBubble 20s linear infinite;
+  filter: blur(8px);
+  opacity: 0.5;
+}
+
+/* Variasi bubble dengan ukuran dan warna */
+.bubbles span:nth-child(1) {
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  background: rgba(96, 165, 250, 0.35); /* biru soft */
+  animation-duration: 18s;
+}
+.bubbles span:nth-child(2) {
+  left: 25%;
+  width: 25px;
+  height: 25px;
+  background: rgba(34, 197, 94, 0.3); /* hijau soft */
+  animation-duration: 22s;
+}
+.bubbles span:nth-child(3) {
+  left: 40%;
+  width: 70px;
+  height: 70px;
+  background: rgba(147, 197, 253, 0.3); /* biru muda */
+  animation-duration: 25s;
+}
+.bubbles span:nth-child(4) {
+  left: 60%;
+  width: 100px;
+  height: 100px;
+  background: rgba(59, 130, 246, 0.25); /* biru lebih kuat */
+  animation-duration: 20s;
+}
+.bubbles span:nth-child(5) {
+  left: 75%;
+  width: 50px;
+  height: 50px;
+  background: rgba(16, 185, 129, 0.25); /* hijau emerald */
+  animation-duration: 30s;
+}
+.bubbles span:nth-child(6) {
+  left: 90%;
+  width: 120px;
+  height: 120px;
+  background: rgba(96, 165, 250, 0.2); /* super besar biru soft */
+  animation-duration: 26s;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.normal-font {
+  font-family: 'Inter', 'Arial', sans-serif;
+}

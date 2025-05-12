@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive Api - Community Groups</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="comm/styles.css">
+</head>
+
+<body class="min-h-screen pt-[60px] pb-10">
+
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader bg-white">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="shadow-sm py-4 px-6 sm:px-10 w-full mx-auto fixed top-0 z-20 bg-blue-100 border-b border-black"></nav>
+  
+  <div class="w-full max-w-3xl mx-auto space-y-6 px-4 sm:px-6">
+
+    <!-- Tombol Navigasi -->
+    <div class="mt-6 mb-4 flex gap-2 justify-start">
+      <a href="https://saweria.co/SennaNetwork" target="_blank" class="inline-flex items-center text-gray-900 bg-blue-100 hover:bg-blue-200 transition px-4 py-2 border border-black">
+        <i class="fas fa-hand-holding-heart"></i>
+      </a>
+    </div>
+
+    <!-- Profile Header -->
+    <div class="text-center bg-blue-50 border border-black p-6 shadow-lg hover:shadow-xl transition-all duration-500">
+      <div class="relative inline-block">
+        <!-- Profile Image with Gradient Border -->
+        <div class="w-32 h-32 mx-auto rounded-full border-4 border-transparent bg-gradient-to-r from-blue-200 via-green-200 to-blue-500 p-[2px]">
+          <img src="https://files.catbox.moe/dc9ggr.jpg" alt="Profile" class="w-full h-full object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+        </div>
+        <span class="absolute bottom-2 right-2 bg-blue-500 p-1 rounded-full animate-pulse">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"/>
+          </svg>
+        </span>
+      </div>
+      <h1 class="text-3xl font-extrabold text-gray-800 mt-4 normal-font">Archive - Community</h1>
+      <p class="text-gray-700 mt-2 text-sm">
+        Welcome to Archive Community — a creative hub for coders, dreamers, and innovators. 
+        Share ideas, sharpen your skills, and grow together with the Archive team. 
+        Let's build the future, one line of code at a time!
+      </p>
+    </div>
+
+    <!-- Group Section -->
+    <div class="bg-blue-50 border border-black p-6 shadow-2xl space-y-4 mt-6">
+      <div id="groups" class="space-y-4">
+        <!-- Dynamic group cards inserted by JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="comm/script.js"></script>
+
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  
+</body>
+</html>
